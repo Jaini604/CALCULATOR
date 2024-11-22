@@ -1,0 +1,204 @@
+/* General Body Styling */
+body {
+    font-size: 2.5vh;
+    background-color: #222222; /* Dark background */
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+}
+
+/* Title */
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 1.5vh;
+    font-size: 4vh;
+}
+
+/* Calculator Container */
+#calculator {
+    width: 100%;
+    max-width: 320px; /* Set max width for responsiveness */
+    padding: 2vh;
+    border: 5px solid #666666;
+    border-radius: 15px;
+    background-color: #1f1f1f; /* Dark background for the calculator */
+    position: relative;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Display Box */
+.box {
+    text-align: right;
+    font-size: 3vh; /* Adjusted for readability */
+    height: 3.5vh;
+    line-height: 3.5vh;
+    padding: 1em;
+    border: 2px solid #e68a00;
+    color: white;
+    background-color: #222222; /* Dark background for the display box */
+    border-radius: 20px;
+    margin-bottom: 1.5vh;
+    word-wrap: break-word;
+    overflow-x: auto;
+}
+
+/* Last Operation History */
+#last_operation_history {
+    height: 6vh;
+    font-size: 3.5vh;
+    text-align: right;
+    padding-right: 1.5vh;
+    background-color: rgb(177, 176, 176);
+    color: #222222;
+    margin-bottom: 1vh;
+}
+
+/* Button Styling */
+button {
+    width: 9vh;
+    height: 9vh;
+    font-weight: bold;
+    font-size: 3.5vh; /* Increased font size for better visibility */
+    color: white;
+    background-color: #666666;
+    border-radius: 50%;
+    border: 1px solid #333333;
+    transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.2s;
+    margin: 0.5vh;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #999999;
+    cursor: pointer;
+    transform: scale(1.1); /* Slightly enlarge button on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Operator Buttons */
+.operator {
+    background-color: #e68a00;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.operator:hover {
+    background-color: #ffd11a;
+    transform: scale(1.1);
+}
+
+/* Equal Button Styling */
+#equal_sign {
+    width: 9vh;
+    height: 9vh;
+    font-weight: bold;
+    font-size: 3.5vh;
+    color: white;
+    background-color: #e68a00;
+    border-radius: 50%;
+    border: 1px solid #333333;
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin: 0.5vh;
+}
+
+#equal_sign:hover {
+    background-color: #ffd11a;
+    transform: scale(1.1);
+}
+
+/* Special Buttons */
+#backspace_btn {
+    background-image: url("../CSS/back_remove.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.5em;
+    background-color: #444444;
+}
+
+#backspace_btn:hover {
+    background-color: #666666;
+}
+
+/* Number and Symbol Buttons */
+button:not(.operator):not(#equal_sign):not(#backspace_btn) {
+    background-color: #444444;
+}
+
+button:not(.operator):not(#equal_sign):not(#backspace_btn):hover {
+    background-color: #666666;
+}
+
+/* General Layout Styling for Table */
+#table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    /* Adjust the font size and button sizes for smaller screens */
+    body {
+        font-size: 3vh;
+    }
+
+    #calculator {
+        width: 90%;
+        max-width: none;
+    }
+
+    .box {
+        font-size: 4vh;
+        height: 4.5vh;
+        line-height: 4.5vh;
+    }
+
+    /* Buttons */
+    button {
+        width: 8vh;
+        height: 8vh;
+        font-size: 3vh;
+    }
+
+    /* Adjust history font size */
+    #last_operation_history {
+        font-size: 4vh;
+    }
+}
+
+@media (max-width: 400px) {
+    /* For very small screens, further adjustments */
+    body {
+        font-size: 4vh;
+    }
+
+    #calculator {
+        width: 95%;
+        max-width: none;
+    }
+
+    .box {
+        font-size: 5vh;
+        height: 5vh;
+        line-height: 5vh;
+    }
+
+    /* Buttons */
+    button {
+        width: 7vh;
+        height: 7vh;
+        font-size: 3.5vh;
+    }
+
+    /* Adjust history font size */
+    #last_operation_history {
+        font-size: 5vh;
+    }
+}
